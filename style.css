@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* HEADER - Alineación forzada en una sola línea */
+header {
+    background-color: #ffffff;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%; /* Espaciado lateral */
+    border-bottom: 1px solid #f0f0f0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 40px; /* Espacio entre el logo y el primer texto (INICIO) */
+}
+
+.logo img {
+    height: 80px; /* Logo más grande */
+    width: auto;
+    object-fit: contain;
+    display: block;
+    /* Si tu logo tiene aire a la izquierda en la imagen, 
+       puedes usar un margen negativo aquí para pegarlo más al borde: */
+    margin-left: -10px; 
+}
+
+/* Forzamos que el nav esté arriba */
+nav {
+    flex: 1; /* El menú ocupa el espacio restante */
+    display: flex;
+    justify-content: flex-end; /* Empuja el menú a la derecha */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Espacio generoso entre palabras */
+    white-space: nowrap; /* ¡VITAL! Evita que "EL CLUB" se rompa en dos líneas */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #002147;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #708090; /* Cambia a gris al pasar el mouse */
+}
+
+/* SECCIÓN HERO */
+#inicio {
+    background-color: #002147;
+    color: white;
+    padding: 100px 5%;
+    text-align: center;
+}
+
+#inicio h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* SECCIÓN MIEMBROS */
+#club {
+    padding: 80px 5%;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.miembros {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+article {
+    background: white;
+    padding: 30px;
+    width: 320px;
+    border-top: 5px solid #002147;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
